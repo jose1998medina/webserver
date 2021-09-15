@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+   <script type="/static/js/index.js"></script>
 
-
-<title>DON JOSÉ</title>
+   <title>PRUEBAS</title>
 </head>
 <body>
 
-<h1>HERRAMIENTAS</h1>
-<img id="imagen" src="/static/images/imagen2.jpg" alt="user">
-<h1>
-Sensor:
-</h>
+  <h1>SERVIDOR DEMO</h1>
+  <img id="imagen" src="/static/images/imagen2.jpg" alt="Error de carga">
+  <h1>
+  Sensor:
+  </h>
 
-<h id ="sensor"></h1>
-<h1 id ="medicion">------</h1>
-<h1>
+  <h id ="sensor"></h1>
+  <h1 id ="medicion">------</h1>
+  <h1>
 	Resultado
-</h1>
+  </h1>
 
-<button id = 'LED1On'type="button" onclick="LED1_On();">
-LED1 ON!</button>
-<button id = 'LED1Off' type="button" onclick="LED1_Off();">
-LED1_OFF!</button>
-
-<script>
-/*
-function LED1_On() {
+  <button id = 'LED1On'type="button" onclick="LED1_On();">
+  Led 1 Encender</button>
+  <button id = 'LED1Off' type="button" onclick="LED1_Off();">
+  Led 1 Apagar!</button>
+  <button id = 'LED1REI'type="button" onclick="alert('SE DESCONECTARA DE LA RED')" onclick="LED1_Rei();">
+  Led 1 Reiniciar!</button>
+  
+  <script>
+  /*
+  function LED1_On() {
 	alert("led on");
 	console.log("led on");
   
-}
-function LED1_Off(){
+  }
+  function LED1_Off(){
 	alert("led off");
 	console.log("led off");
-}
-*/
-</script>
-<script type="/static/js/index.js"></script>
+  }
+  */
+  </script>
 </body>
 </html>
