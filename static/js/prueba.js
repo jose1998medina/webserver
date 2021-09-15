@@ -1,8 +1,8 @@
-alert('Alerta de virus ten cuidado');
+alert('Alerta de control');
 sensor=document.getElementById('sensor')
-sensor.innerHTML='Esperando orden'
+sensor.innerHTML='Valores'
 medicion=document.getElementById('medicion')
-medicion.innerHTML='Error'
+medicion.innerHTML='Esperando ejecución......'
 function inicio() {document.getElementById('medicion').innerHTML="Error";}
 function LED1_On() {
   console.log("Se presiono el botón encender")
