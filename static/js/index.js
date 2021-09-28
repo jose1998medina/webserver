@@ -3,24 +3,32 @@
 function LED1_On() {
 	//alert("led on");
 	console.log("led on");
-	//document.getElementById("sensor").innerHTML="led on";
+	document.getElementById("sensor").innerHTML="Encendido";
 	message = new Paho.MQTT.Message("ON");
     	message.destinationName = "jose.medinapaz1998@gmail.com/t1";
     	client.send(message);
-  
 }
+
+
 function LED1_Off(){	
 	//alert("led off");
 	console.log("led off");
+	document.getElementById("sensor").innerHTML="Apagado";
 	message = new Paho.MQTT.Message("OFF");
     	message.destinationName = "jose.medinapaz1998@gmail.com/t1";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
 
-
-
-
+function LED1_REI(){	
+	//alert("led off");
+	console.log("led off");
+	document.getElementById("sensor").innerHTML="Reiniciar";
+	message = new Paho.MQTT.Message("REI");
+    	message.destinationName = "jose.medinapaz1998@gmail.com/t1";
+    	client.send(message);
+	//document.getElementById("sensor").innerHTML="led off";
+}
 
 
 // Create a client instance
@@ -50,9 +58,14 @@ function LED1_Off(){
     client.subscribe("jose.medinapaz1998@gmail.com/t2");
     message = new Paho.MQTT.Message("hola desde la web");
     message.destinationName = "jose.medinapaz1998@gmail.com/t1";
+  
+   
+   
     client.send(message);
 	
   }
+
+
 
   function doFail(e){
     console.log(e);
@@ -67,8 +80,20 @@ function LED1_Off(){
   }
 
   // called when a message arrives
-  function onMessageArrived(message) {
+ 
+ function onMessageArrived(message) {
     console.log("onMessageArrived:"+message.payloadString);
-	  document.getElementById("res").innerHTML=message.payloadString;
+    var sms = message.payloadString.split(";")
+    //document.getElementById("res").innerHTML=message.payloadString;
+    document.getElementById("res").innerHTML=sms[0];
+    document.getElementById("res1").innerHTML=sms[1];
+    document.getElementById("res2").innerHTML=sms[2];
+    
   }
+  
+
+
+
+
+ 
   

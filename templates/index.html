@@ -6,29 +6,28 @@
 
    <title>PRUEBAS</title>
 </head>
-<body>
-
-  <h1>SERVIDOR DEMO</h1>
-  <img id="imagen" src="/static/images/imagen2.jpg" alt="Error de carga">
-  <h1>
-  Sensor:
-  </h>
-
-  <h id ="sensor">------</h1>
-  <h1 id ="medicion">------</h1>
-  <h2>
-  Resultado:
-  </h>
-
-  <h id="res">------</h2>
-
-  <button id = 'LED1On'type="button" onclick="LED1_On();">
-  Led 1 Encender</button>
-  <button id = 'LED1Off' type="button" onclick="LED1_Off();">
-  Led 1 Apagar!</button>
-  <button id = 'LED1REI'type="button" onclick="alert('SE DESCONECTARA DE LA RED')" onclick="LED1_Rei();">
-  Led 1 Reiniciar!</button>
+<body onload='inicio()'>
+<body bgcolor="D5DBDB " > <h1>SERVIDOR DEMO</h1> </body>
   
+  <img id="imagen" width="250" height="250" src="/static/images/imagen2.jpg" alt="Error de carga">
+  <h2> Sensor: </h> <h style="color:#2E86C1" id ="sensor">------</h2>
+
+  <h2 style="color:#2E86C1" id ="medicion">------</h2>
+  <hr align="left" width="50%" size="5"noshade>
+  <h3> Valor :</h> <h style="color:#E74C3C" id="res">------</h3>
+  <h3> Resultado 1:</h> <h style="color:#E74C3C" id="res1">------</h3>
+
+  <h3> Resultado 2: </h> <h style="color:#E74C3C" id="res2">------</h3>
+  <hr align="left" width="50%" size="5"noshade>
+
+  <button style="color:#21618C" id = 'ledon'type="button" onclick="LED1_On();">
+  Led 1 Encender!</button>
+  
+  <button style="color:#21618C" id = 'ledoff' type="button" onclick="LED1_Off();">
+  Led 1 Apagar!</button>
+  <button style="color:#21618C" id = 'ledrei'type="button" onclick="LED1_REI();">
+  Led 1 Reiniciar!</button>
+
   <script>
   /*
   function LED1_On() {
@@ -42,6 +41,7 @@
   }
   */
   </script>
-<script src="/static/js/prueba.js"></script>
+  <script src="/static/js/prueba.js"></script>
+<script src="/static/js/index.js"></script>
 </body>
 </html>
